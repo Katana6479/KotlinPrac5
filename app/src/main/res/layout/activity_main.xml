@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="445dp"
+        android:id="@+id/linear"
+        app:layout_constraintTop_toTopOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textview1"
+            android:hint="Text"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:id="@+id/Edit1"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/linear"
+        app:layout_constraintStart_toStartOf="@id/linear"
+        android:layout_marginBottom="100dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/btnAdd"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/Edit1"
+        app:layout_constraintEnd_toEndOf="@id/Edit1"
+        app:layout_constraintTop_toTopOf="@id/Edit1"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

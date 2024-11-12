@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id ("kotlin-kapt")
+    id ("com.google.dagger.hilt.android")
 }
 
 android {
@@ -40,6 +41,10 @@ android {
 }
 
 dependencies {
+    implementation ("com.google.dagger:hilt-android:2.52")
+    kapt ("com.google.dagger:hilt-compiler:2.52")
+    implementation(libs.androidx.espresso.core)
+
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
     kapt(libs.androidx.room.compiler)
     implementation (libs.androidx.room.runtime)
@@ -48,6 +53,7 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.gson)
     implementation (libs.converter.gson)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
